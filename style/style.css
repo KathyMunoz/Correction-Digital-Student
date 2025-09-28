@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f0f0f0;
+}
+/* =========== INTRODUCTION ========== */
+h1 {
+    text-align: center;
+    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    line-height: 2;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+/* =========== NAVBAR ========== */
+header  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+           
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #facc15;
+   
+}
+
+/* =========== Pour quoi apprendre HTML/CSS? ========== */
+.raisons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 40px 20px;
+}
+
+.raisons-img img{
+    border: solid 2px;
+    border-radius: 10px;
+    max-width: 100%;
+    
+}
+
+.raisons-text h2 {
+    line-height: 1.5;
+}
+
+.raisons-text ul {
+    padding-left: 20px;
+}
+/* =========== GRID AVEC TITRE1 ET TITRE2 ========== */
+.titres {
+    display: grid;
+    grid-template-columns: 1fr 1fr;/*deux colonnes égales*/
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.titre1, .titre2 {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.titre1 p, .titre2 p {
+    margin-bottom: 15px;
+}
+
+.titre1 ul, .titre2 ul {
+    padding-left: 20px;
+}
+
+.titre1 ol, .titre2 ol {
+    padding-left: 20px;
+}
+
+.titre1 img, .titre2 img {
+    max-width: 50%;
+    display: block;/*img devient un block*/
+    margin: auto;/*centrage img horizontal*/
+}
+
+/* =========== ANIMATIONS ========== */
+a:hover {
+    color:#3b82f6;
+}
+
+button:hover {
+    color: #3b82f6;
+}
+
+.label-button-bis {
+ --color: #0044a9;
+ --color2: rgb(10, 25, 30);
+ padding: 0.8em 1.75em;
+ background-color: transparent;
+ border-radius: 6px;
+ border: .3px solid var(--color);
+ transition: .5s;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ z-index: 1;
+ font-weight: 300;
+ font-size: 17px;
+ font-family: 'Roboto', 'Segoe UI', sans-serif;
+ text-transform: uppercase;
+ color: var(--color);
+}
+
+.label-button-bis::after, .label-button-bis::before {
+ content: '';
+ display: block;
+ height: 100%;
+ width: 100%;
+ transform: skew(90deg) translate(-50%, -50%);
+ position: absolute;
+ inset: 50%;
+ left: 25%;
+ z-index: -1;
+ transition: .5s ease-out;
+ background-color: var(--color);
+}
+
+.label-button-bis::before {
+ top: -50%;
+ left: -25%;
+ transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.label-button-bis:hover::before {
+ transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.label-button-bis:hover::after {
+ transform: skew(45deg) translate(-50%, -50%);
+}
+
+.label-button-bis:hover {
+ color: var(--color2);
+}
+
+.label-button-bis:active {
+ filter: brightness(.7);
+ transform: scale(.98);
+}
+
+/* =========== CHARTRE GRAPHIQUE ========== */
+h1, h2, h3 {
+    font-family: "Nunito Sans";  
+}
+
+h2 {
+    color: #facc15;
+}
+
+a,p,li {
+    font-family: Open Sans;
+}
+/* =========== FORMULAIRE ========== */
+.formulaire {
+    padding: 40px 20px;
+    margin-bottom: 80px;
+}
+
+.formulaire form {
+    max-width: 600px;
+    margin: auto;
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px; 
+}
+
+.espace {
+    margin: 20px 20px 20px 20px;
+}
+
+.label {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    background: #e0e0e0;
+} 
+
+.label-button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.label-button-bis {
+    margin: 10px
+}
+
+/* =========== FOOTER ========== */
+.footer {
+    background: #0b2540;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+/* =========== FOOTER ========== */
+@media (max-width: 768px) {
+    .raisons {
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .titres {
+        grid-template-columns: 1fr;/*titre1 et titre2 en une seule colonne*/
+    }
+    .formulaire {
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
