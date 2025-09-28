@@ -233,7 +233,7 @@ fieldset {
     margin: 10px;
 }
 
-/* =========== FOOTER ========== */
+/* =========== RESPONSIVE ========== */
 @media (max-width: 768px) {
     .raisons {
         flex-direction: column;
